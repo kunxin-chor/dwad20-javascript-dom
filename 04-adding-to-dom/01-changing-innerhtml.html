@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Image Loading Example</h1>
+        <div id="demo">
+            This demo how to use innerHTML
+        </div>
+        <button id="btnLoadImage">Load an image</button>
+        <button id="btnLoadChickenRice">Load a chicken rice image</button>
+        <div id="image"></div>
+    </div>
+    <script>
+        let buttonElement = document.querySelector("#btnLoadImage");
+        buttonElement.addEventListener("click", function(){
+            let imageDivElement = document.querySelector("#image");
+            imageDivElement.innerHTML = `<img src="waffle.jpg"/>`
+        })
+
+        let chickenRiceButtonElement = document.querySelector("#btnLoadChickenRice");
+        chickenRiceButtonElement.addEventListener('click', function(){
+            let imageDivElement = document.querySelector("#image");
+            imageDivElement.innerHTML = `<img src="chicken_rice.jpg"/>`
+        });
+    </script>
+
+</body>
+</html>
