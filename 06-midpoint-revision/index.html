@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>COVID Declaration Form</h1>
+    <div id="summary">
+        
+    </div>
+
+    <div>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" id="name" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" id="email" />
+    </div>
+
+    <div>
+        <label>Are you having flu-like symptoms?</label>
+        <input type="radio" name="flu" class="flu"
+            value="yes" checked/><label>Yes</label>
+        <input type="radio" name="flu" class="flu"
+            value="no" /><label>No</label>
+    </div>
+    <div>
+        Tick if any one of the following is true:
+        <input type="checkbox" name="conditions" class="conditions"
+            value="family-had-covid"/><label>My family members had covid
+            for the past two weeks</label>
+        <input type="checkbox" name="conditions" class="conditions"
+            value="had-travelled-overseas" /><label>I have travelled
+            overseas in
+            the past three weeks</label>
+        <input type="checkbox" name="conditions" class="conditions"
+            value="my-family-member-had-flu" /><label>My family members had
+            flu</label>
+    </div>
+    <div>
+        <!-- Since there's only one checkbox for this question, the value is not important -->
+        <label>I declare I have not submitted any false info:</label>
+        <input type="checkbox" id="declaration" value="yes"/>
+    </div>
+
+    <button id="btnSubmit">Submit</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
