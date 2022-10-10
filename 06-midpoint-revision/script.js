@@ -3,7 +3,7 @@
 //    
 //})
 
-// localization data
+// localization data (lookup table)
 let errorMessages = {
     "en":{
         "name_not_entered": "Please enter your name",
@@ -19,6 +19,8 @@ let errorMessages = {
     }
 }
 
+// GLOBAL VARIABLE
+let language="jp";  // make sure how we store the language matches the key in the lookup table
 
 // 1. EVENT
 document.querySelector("#btnSubmit").addEventListener("click", function(){
@@ -94,16 +96,16 @@ document.querySelector("#btnSubmit").addEventListener("click", function(){
     // If we use `+=`, then we are appending and we'll see
     // each of the error messages 
     if (emailEntered == false) {
-        summaryElement.innerHTML += `<p>Please provide your email</p>`;
+        summaryElement.innerHTML += '<p>' + errorMessages[language].email_not_entered + '</p>';
     }
     if (emailEntered == true && emailValid == false) {
-        summaryElement.innerHTML += `<p>The email is not valid.</p>`;
+        summaryElement.innerHTML += `<p>${errorMessages[langauge].email_format_invalid}</p>`
     }
     if (nameEntered == false) {
-        summaryElement.innerHTML += `<p>Please provide your name</p>`;
+        summaryElement.innerHTML += '<p>' + errorMessages[language].name_not_entered + '</p>'
     }
     if (isDeclared == false) {
-        summaryElement.innerHTML += `<p>Please declare that you are telling the truth</p>`
+        summaryElement.innerHTML += '<p>' + errorMessages[language].declaration_not_checked + '</p>'
     }
 
 })
